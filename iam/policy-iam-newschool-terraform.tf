@@ -11,6 +11,7 @@ data "aws_iam_policy_document" "doc-policy-iam-newschool-terraform" {
     actions = [
       "iam:CreatePolicy",
       "iam:DeletePolicy",
+      "iam:CreateRole",
       "iam:GetRole",
       "iam:GetPolicyVersion",
       "iam:PassRole",
@@ -19,6 +20,8 @@ data "aws_iam_policy_document" "doc-policy-iam-newschool-terraform" {
       "iam:ListPolicyVersions",
       "iam:CreatePolicyVersion",
       "iam:DeletePolicyVersion",
+      "iam:ListAttachedRolePolicies",
+      "iam:AttachRolePolicy",
     ]
 
     resources = [
