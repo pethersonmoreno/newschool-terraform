@@ -596,6 +596,26 @@ resource "aws_elastic_beanstalk_environment" "env-newschool-api-dev-new-env" {
     namespace = "aws:elasticbeanstalk:application:environment"
     value     = var.SYNC_DATABASE
   }
+  setting {
+    name      = "PUSHER_APP_ID"
+    namespace = "aws:elasticbeanstalk:application:environment"
+    value     = var.PUSHER_APP_ID
+  }
+  setting {
+    name      = "PUSHER_KEY"
+    namespace = "aws:elasticbeanstalk:application:environment"
+    value     = var.PUSHER_KEY
+  }
+  setting {
+    name      = "PUSHER_SECRET"
+    namespace = "aws:elasticbeanstalk:application:environment"
+    value     = var.PUSHER_SECRET
+  }
+  setting {
+    name      = "PUSHER_CLUSTER"
+    namespace = "aws:elasticbeanstalk:application:environment"
+    value     = var.PUSHER_CLUSTER
+  }
 }
 variable "CHANGE_PASSWORD_EXPIRATION_TIME" {
   type = string
@@ -672,4 +692,16 @@ variable "SMTP_USER" {
 variable "SYNC_DATABASE" {
   type = string
   description = "SYNC_DATABASE"
+}
+variable "PUSHER_APP_ID" {
+  type = string
+}
+variable "PUSHER_KEY" {
+  type = string
+}
+variable "PUSHER_SECRET" {
+  type = string
+}
+variable "PUSHER_CLUSTER" {
+  type = string
 }
