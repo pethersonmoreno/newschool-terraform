@@ -110,6 +110,7 @@ data "aws_iam_policy_document" "doc-policy-newschool-terraform" {
       "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/aws-elasticbeanstalk-service-role",
       "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/aws-elasticbeanstalk-ec2-role",
       "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/service-role/service-role-codepipeline-newschool-us-east-2",
+      "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/service-role/service-role-codebuild-newschool-us-east-2",
       "arn:aws:iam::${data.aws_caller_identity.current.account_id}:instance-profile/aws-elasticbeanstalk-ec2-role"
     ]
   }
